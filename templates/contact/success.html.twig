@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande envoyée{% endblock %}
+
+{% block body %}
+<div class="container text-center">
+    <div class="my-5 alert alert-success">{{ message }}</div>
+
+    <p>Autre chose à nous demander ? <a href="{{ path('app_contact') }}">C'est par ici !</a></p>
+</div>
+{% endblock %}

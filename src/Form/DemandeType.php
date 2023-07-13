@@ -16,6 +16,20 @@ class DemandeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('nom', TextType::class, [
+                'required' => true,
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Votre nom'
+                ]
+                ])
+            ->add('prenom', TextType::class, [
+                'required' => true,
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Votre prénom'
+                ]
+                ])
             ->add('objet', TextType::class, [
                 'required' => true,
                 'label' => false,

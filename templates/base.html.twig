@@ -16,6 +16,26 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path('app_index') }}">Test technique<br/><img src="{{ asset('icons/vvf.svg') }}" alt="" width="70px"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="{{ path('app_contact') }}">Formulaire</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="https://github.com/aureliefb" target="_blank">Dépôt <img src="{{ asset('icons/github.png') }}" alt="" width="20px"/></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block body %}
+        {% endblock %}        
     </body>
 </html>
